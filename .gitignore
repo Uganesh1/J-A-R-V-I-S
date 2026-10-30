@@ -1,0 +1,209 @@
+# =============================================================================
+# JARVIS — .gitignore
+# Local-first AI Desktop Assistant
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# Python
+# -----------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# -----------------------------------------------------------------------------
+# Virtual environments
+# -----------------------------------------------------------------------------
+jarvis_env/
+jarvis_env_311/
+venv/
+.venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# -----------------------------------------------------------------------------
+# Personal data — NEVER commit
+# -----------------------------------------------------------------------------
+# SQLite memory database (contains conversation history + user memories)
+jarvis_memory.db
+jarvis_memory.db-journal
+jarvis_memory.db-wal
+jarvis_memory.db-shm
+*.sqlite
+*.sqlite3
+*.db
+
+# User exports
+memory_export_*.json
+conversations_*.json
+user_data/
+
+# -----------------------------------------------------------------------------
+# Logs
+# -----------------------------------------------------------------------------
+logs/
+*.log
+log.txt
+jarvis_*.log
+
+# -----------------------------------------------------------------------------
+# Configuration — contains personal prompts / API-like settings
+# Commit settings.example.json instead
+# -----------------------------------------------------------------------------
+config/settings.json
+
+# -----------------------------------------------------------------------------
+# Offline AI / Voice models — HUGE files, download separately
+# -----------------------------------------------------------------------------
+models/
+*.onnx
+*.onnx.json
+*.tflite
+*.bin
+*.gguf
+*.ggml
+*.pt
+*.pth
+*.safetensors
+
+# Vosk models
+vosk-model-*/
+
+# Piper models
+*_medium.onnx*
+*_low.onnx*
+*_high.onnx*
+
+# Ollama local cache (if ever placed inside project)
+.ollama/
+
+# -----------------------------------------------------------------------------
+# Asset binaries — keep source but ignore large generated files
+# -----------------------------------------------------------------------------
+assets/sounds/*.wav
+assets/sounds/*.mp3
+assets/animations/*.gif
+assets/animations/*.mp4
+!assets/icons/*.png
+!assets/icons/*.svg
+
+# -----------------------------------------------------------------------------
+# Screenshots taken by JARVIS
+# -----------------------------------------------------------------------------
+Screenshots/
+*.png.tmp
+
+# -----------------------------------------------------------------------------
+# Environment variables
+# -----------------------------------------------------------------------------
+.env
+.env.*
+!.env.example
+
+# -----------------------------------------------------------------------------
+# IDE / Editor
+# -----------------------------------------------------------------------------
+# VS Code
+.vscode/
+*.code-workspace
+
+# PyCharm / IntelliJ
+.idea/
+*.iml
+
+# Sublime
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+
+# -----------------------------------------------------------------------------
+# Operating system files
+# -----------------------------------------------------------------------------
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Linux
+*~
+.directory
+.Trash-*
+
+# -----------------------------------------------------------------------------
+# Temporary / cache
+# -----------------------------------------------------------------------------
+.cache/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.hypothesis/
+tmp/
+temp/
+*.tmp
+*.bak
+*.orig
+
+# -----------------------------------------------------------------------------
+# Testing artifacts
+# -----------------------------------------------------------------------------
+.pytest_cache/
+coverage.xml
+*.cover
+nosetests.xml
+
+# -----------------------------------------------------------------------------
+# Backup files created by users experimenting
+# -----------------------------------------------------------------------------
+JARVIS.bak/
+JARVIS_backup*/
+*_old/
+*_backup/
+
+# -----------------------------------------------------------------------------
+# Distribution / packaging
+# -----------------------------------------------------------------------------
+.installed.cfg
+pip-wheel-metadata/
+pip-log.txt
+pip-delete-this-directory.txt
