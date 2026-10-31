@@ -43,8 +43,9 @@ class AIEngine:
 
     def install_model_instructions(self):
         return (
-            "Ollama is not running or no models are installed.\n"
+            "Ollama is not running or the Tamil model is not installed.\n"
             "1. Install Ollama from https://ollama.com\n"
-            "2. Open a terminal and run: ollama pull llama3.2:1b\n"
+            "2. Open a terminal and run:\n"
+            "   ollama pull hf.co/CryptoYogi/vazhi-v7_1-Q4_K_M-GGUF:Q4_K_M\n"
             "3. Restart JARVIS."
         )
