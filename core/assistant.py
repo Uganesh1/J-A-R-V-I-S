@@ -16,7 +16,7 @@ class Assistant:
         self.ai = AIEngine(model=config.get("ai.model", "llama3.2:1b"))
         self.permissions = PermissionManager()
         self.memory = MemoryManager()
-        self.speaker = Speaker()
+        self.speaker = Speaker(config)          # ← only change: pass config
 
         self.voice = None          # lazy-loaded on first push-to-talk press
 

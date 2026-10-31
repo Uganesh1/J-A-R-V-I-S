@@ -10,3 +10,4 @@ beautifulsoup4==4.12.3
 sounddevice==0.5.1
 numpy==2.3.3
 pyttsx3==2.90
+faster-whisper>=1.0.0
